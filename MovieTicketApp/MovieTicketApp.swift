@@ -30,7 +30,7 @@ struct MovieTicketApp: View {
     
     func renderTicket(_ ticket: Ticket, angle: CGFloat) -> some View {
         
-        return TicketView(studioName: ticket.studioName, movieTitle: ticket.movieTitle, imageName: ticket.imageName)
+        return TicketView(ticket: ticket)
                .frame(width: UIScreen.main.bounds.width)
         .frame(minHeight: 0.0, maxHeight: .infinity)
          .rotation3DEffect(Angle(degrees: Double(angle)) , axis: (x: 0, y: 10.0, z: 0))

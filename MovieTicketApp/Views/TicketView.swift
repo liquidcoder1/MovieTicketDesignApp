@@ -9,13 +9,12 @@
 import SwiftUI
 
 struct TicketView: View {
-    var studioName = "studio"
-    var movieTitle = "ONLY GOD FORGIVES"
-    var imageName = "terminator.jpg"
+
+    var ticket = Ticket.data().first!
     
     var body: some View {
       VStack(spacing: 0) {
-                  TopTicketView(studioName: studioName, movieTitle: movieTitle, imageName: imageName)
+        TopTicketView(studioName: ticket.studioName, movieTitle: ticket.movieTitle, imageName: ticket.imageName)
                       .background(Color.white)
                       .clipShape(TicketShape())
                   .modifier(CardStyleModifier())
